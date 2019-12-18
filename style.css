@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    background: url(blue-ridge-mountains-clipart-4.jpg) no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #555;
+    height: 100vh;
+}
+
+.wrapper {
+    width: 1000px;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 10px 50px #2625254d;
+    overflow: hidden;
+}
+
+.player-0-panel,
+.player-1-panel {
+    width: 50%;
+    float: left;
+    height: 600px;
+    padding: 100px;
+}
+
+.player-name {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 100;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.player-score {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 100;
+    color: #412ad7;
+    margin-bottom: 130px;
+}
+
+.active { background-color: #b3b3b3; }
+.active .player-name { font-weight: 300; }
+
+.active .player-name::after {
+    content: "\2022";
+    font-size: 47px;
+    position: absolute;
+    color: #412ad7;
+    top: -7px;
+    right: 10px;
+    
+}
+
+.player-current-box {
+    background-color: #7d70d0;
+    color: #fff;
+    width: max-content;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: center;
+}
+
+.player-current-label {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #222;
+}
+
+.player-current-score {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #555;
+    background: none;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+button:focus {
+    outline: none;
+}
+
+i {
+    color: #412ad7;
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 32px;
+    line-height: 1;
+    vertical-align: text-top;
+    margin-top: -4px;
+    transition: margin 0.3s;
+}
+
+.btn-new { top: 531px;;}
+.btn-roll { top: 403px;}
+.btn-hold { top: 467px;}
+
+.dice {
+    position: absolute;
+    left: 50%;
+    top: 178px;
+    transform: translateX(-50%);
+    height: 100px;
+    box-shadow: 0px 10px 60px #0000001a;
+}
+
+.winner { background-color: #f7f7f7; }
+.winner .player-name { 
+    font-weight: 300; 
+    color: #4dc6eb; 
+}
